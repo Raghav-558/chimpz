@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-image: url("/assets/images/jungle-background-forest-nature-scene-futuristic-generative-ai\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.col-7 {
+    width: 58.33%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.col-5 {
+    width: 41.66%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* .col-6{
+    width: 50%;
+    padding-left: 12px;
+    padding-right: 12px;
+    } */
+.col-12 {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.menuitems {
+    font-family: Fira Sans, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: white;
+    padding-left: 160px;
+}
+
+.color-white {
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.g-25 {
+    gap: 50px;
+}
+
+.g-10 {
+    gap: 10px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 5px 5px 2px 5px;
+}
+
+.navbar {
+    margin-top: 15px;
+}
+
+.buy-now {
+    padding: 14px 32px 14px 32px;
+    color: white;
+    background: #FFC20A;
+    border: none;
+    border-radius: 100px;
+}
+
+.Chimpz {
+    font-family: "Exo 2", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 76.8px;
+    text-align: left;
+    color: green;
+}
+
+.span {
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 76.8px;
+    text-align: left;
+    text-shadow: 1px 1px 2px white;
+}
+
+.para-1 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: white;
+}
+
+.para-3 {
+    color: white;
+    font-family: Fira Sans, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+
+
+@media (max-width:1200px) {
+    label[for="menubar"] {
+        width: 35px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 3;
+        justify-content: space-between;
+    }
+
+    label[for="menubar"]>span {
+        height: 6px;
+        width: 100%;
+        background-color: darkgreen;
+        border-radius: 5px;
+    }
+
+    ul.menuitems {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        transition: all 150ms linear;
+        height: 100vh;
+        padding-right: 100px;
+        z-index: 2;
+    }
+
+    input[type="checkbox"]:checked~ul {
+        background: lightblue;
+        right: 0;
+    }
+
+    input[type="checkbox"]:checked+label[for="menubar"] :first-child {
+        transform: rotate(40deg);
+        transform-origin: left;
+    }
+
+    input[type="checkbox"]:checked+label[for="menubar"] :nth-child(2) {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    input[type="checkbox"]:checked+label[for="menubar"] :last-child {
+        transform: rotate(-45deg);
+        transform-origin: left;
+    }
+}
+
+@media (min-width:992px) {
+    .col-lg-5 {
+        width: 41.66%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
